@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All About Pull Requests in Git</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #2c3e50;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 2.5em;
+      }
+
+      h2 {
+        margin-top: 30px;
+        font-size: 1.8em;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+      }
+
+      section {
+        background: #fff;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+      }
+
+      p,
+      li {
+        font-size: 1.1em;
+        color: #555;
+      }
+
+      ul,
+      ol {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      code {
+        background-color: #e9ecef;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.9em;
+        color: #d40f72;
+      }
+
+      pre {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 15px;
+        border-radius: 6px;
+        overflow-x: auto;
+      }
+
+      pre code {
+        background-color: transparent;
+        color: inherit;
+        padding: 0;
+      }
+
+      footer {
+        text-align: center;
+        margin: 40px 0;
+        font-size: 0.9em;
+        color: #777;
+      }
+
+      footer a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2em;
+        }
+
+        h2 {
+          font-size: 1.5em;
+        }
+
+        section {
+          margin: 10px;
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>All About Pull Requests in Git</h1>
+
+    <section>
+      <h2>What is a Pull Request?</h2>
+      <p>
+        A <strong>Pull Request (PR)</strong> is a feature in Git platforms (like
+        GitHub, GitLab, or Bitbucket) that allows developers to propose changes
+        to a repository. It enables collaboration by requesting the maintainers
+        to review and merge the changes into the main branch.
+      </p>
+    </section>
+
+    <section>
+      <h2>Why Use Pull Requests?</h2>
+      <ul>
+        <li>Encourages code review and collaboration.</li>
+        <li>Ensures changes are tested and validated before merging.</li>
+        <li>Provides a clear history of changes and discussions.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Steps to Create a Pull Request</h2>
+      <ol>
+        <li>
+          <strong>Fork the Repository:</strong> Create a copy of the repository
+          on your GitHub/GitLab account.
+        </li>
+        <li>
+          <strong>Clone the Repository:</strong> Use
+          <code>git clone &lt;repository-url&gt;</code> to clone the forked
+          repository to your local machine.
+        </li>
+        <li>
+          <strong>Create a New Branch:</strong> Use
+          <code>git checkout -b &lt;branch-name&gt;</code> to create a new
+          branch for your changes.
+        </li>
+        <li>
+          <strong>Make Changes:</strong> Add, edit, or delete files as needed.
+        </li>
+        <li>
+          <strong>Commit Changes:</strong> Use <code>git add .</code> and
+          <code>git commit -m "Your commit message"</code> to commit your
+          changes.
+        </li>
+        <li>
+          <strong>Push Changes:</strong> Use
+          <code>git push origin &lt;branch-name&gt;</code> to push your branch
+          to the remote repository.
+        </li>
+        <li>
+          <strong>Open a Pull Request:</strong> Go to the repository on
+          GitHub/GitLab and click "New Pull Request." Select your branch and
+          provide a title and description for the PR.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Best Practices for Pull Requests</h2>
+      <ul>
+        <li>Write a clear and descriptive title for the PR.</li>
+        <li>
+          Provide a detailed description of the changes, including the purpose
+          and any related issues.
+        </li>
+        <li>Keep PRs small and focused on a single task or feature.</li>
+        <li>
+          Reference related issues or tickets using keywords like
+          <code>Fixes #123</code>.
+        </li>
+        <li>
+          Ensure your code is tested and follows the project's coding standards.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Reviewing a Pull Request</h2>
+      <p>As a reviewer, you should:</p>
+      <ul>
+        <li>
+          Check the code for correctness, readability, and adherence to
+          standards.
+        </li>
+        <li>Test the changes locally if necessary.</li>
+        <li>Provide constructive feedback and suggestions for improvement.</li>
+        <li>Approve the PR if it meets the requirements.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Merging a Pull Request</h2>
+      <p>
+        Once a PR is approved, it can be merged into the main branch. Options
+        include:
+      </p>
+      <ul>
+        <li>
+          <strong>Merge Commit:</strong> Combines the changes into a single
+          commit.
+        </li>
+        <li>
+          <strong>Squash and Merge:</strong> Combines all commits into one
+          before merging.
+        </li>
+        <li>
+          <strong>Rebase and Merge:</strong> Replays the commits on top of the
+          main branch.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Closing a Pull Request</h2>
+      <p>
+        If a PR is no longer needed or is invalid, it can be closed without
+        merging. Provide a reason for closing to maintain transparency.
+      </p>
+    </section>
+
+    <section>
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Pull Requests are essential for collaboration and code review.</li>
+        <li>Follow best practices for creating and reviewing PRs.</li>
+        <li>
+          Use descriptive titles and detailed descriptions to communicate
+          changes effectively.
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Created by [Arman ihsan].</p>
+    </footer>
+  </body>
+</html>
